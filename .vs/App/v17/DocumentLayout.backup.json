@@ -3,28 +3,34 @@
   "WorkspaceRootPath": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|c:\\me\\projects\\windows_form\\app\\main_pages\\productspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|c:\\me\\projects\\windows_form\\app\\main_functions\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|solutionrelative:main_functions\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\main_functions\\receiptitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|solutionrelative:main_functions\\receiptitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\main_pages\\invoice\\cashpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|solutionrelative:main_pages\\invoice\\cashpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\main_pages\\productspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|solutionrelative:main_pages\\productspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|c:\\me\\projects\\windows_form\\app\\main_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|solutionrelative:main_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|c:\\me\\projects\\windows_form\\app\\main_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|solutionrelative:main_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|c:\\me\\projects\\windows_form\\app\\main_pages\\profilepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|solutionrelative:main_pages\\profilepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|c:\\me\\projects\\windows_form\\app\\main_pages\\productspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\main_pages\\productspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|solutionrelative:main_pages\\productspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|c:\\me\\projects\\windows_form\\app\\main_pages\\invoicepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|solutionrelative:main_pages\\invoicepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\data_model\\ikingboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6F706D0-4701-4DC9-8874-86DAD3E55276}|App.csproj|solutionrelative:data_model\\ikingboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__ME_PROJECTS_WINDOWS_FORM_KINGBOARDDB.MDF/True/SqlTable/dbo.Invoices.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__ME_PROJECTS_WINDOWS_FORM_KINGBOARDDB.MDF/True/SqlTable/dbo.InvoiceDetails.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,27 +45,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Services.cs",
+              "DocumentMoniker": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_functions\\Services.cs",
+              "RelativeDocumentMoniker": "Main_functions\\Services.cs",
+              "ToolTip": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_functions\\Services.cs*",
+              "RelativeToolTip": "Main_functions\\Services.cs*",
+              "ViewState": "AgIAALcAAAAAAAAAAAAiwLMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T12:25:03.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReceiptItem.cs",
+              "DocumentMoniker": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_functions\\ReceiptItem.cs",
+              "RelativeDocumentMoniker": "Main_functions\\ReceiptItem.cs",
+              "ToolTip": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_functions\\ReceiptItem.cs",
+              "RelativeToolTip": "Main_functions\\ReceiptItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T13:09:29.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CashPage.cs",
+              "DocumentMoniker": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_Pages\\Invoice\\CashPage.cs",
+              "RelativeDocumentMoniker": "Main_Pages\\Invoice\\CashPage.cs",
+              "ToolTip": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_Pages\\Invoice\\CashPage.cs",
+              "RelativeToolTip": "Main_Pages\\Invoice\\CashPage.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAASwJsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T12:46:05.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ProductsPage.cs",
               "DocumentMoniker": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_Pages\\ProductsPage.cs",
               "RelativeDocumentMoniker": "Main_Pages\\ProductsPage.cs",
               "ToolTip": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_Pages\\ProductsPage.cs",
               "RelativeToolTip": "Main_Pages\\ProductsPage.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAqwAcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAPoAAAAAAAAAAAA4wBMBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T18:55:33.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InvoicePage.cs [Design]",
-              "DocumentMoniker": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_Pages\\InvoicePage.cs",
-              "RelativeDocumentMoniker": "Main_Pages\\InvoicePage.cs",
-              "ToolTip": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_Pages\\InvoicePage.cs [Design]",
-              "RelativeToolTip": "Main_Pages\\InvoicePage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T18:51:51.085Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-03-23T12:13:21.743Z"
             },
             {
               "$type": "Document",
@@ -70,45 +100,37 @@
               "ToolTip": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_Pages\\ProductsPage.cs [Design]",
               "RelativeToolTip": "Main_Pages\\ProductsPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T18:51:50.599Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-03-23T12:13:17.019Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProfilePage.cs [Design]",
-              "DocumentMoniker": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_Pages\\ProfilePage.cs",
-              "RelativeDocumentMoniker": "Main_Pages\\ProfilePage.cs",
-              "ToolTip": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_Pages\\ProfilePage.cs [Design]",
-              "RelativeToolTip": "Main_Pages\\ProfilePage.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "IKingBoardRepository.cs",
+              "DocumentMoniker": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Data_Model\\IKingBoardRepository.cs",
+              "RelativeDocumentMoniker": "Data_Model\\IKingBoardRepository.cs",
+              "ToolTip": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Data_Model\\IKingBoardRepository.cs",
+              "RelativeToolTip": "Data_Model\\IKingBoardRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T18:51:49.938Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-03-23T11:15:51.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Main_home.cs",
-              "DocumentMoniker": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_home.cs",
-              "RelativeDocumentMoniker": "Main_home.cs",
-              "ToolTip": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_home.cs",
-              "RelativeToolTip": "Main_home.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T18:51:40.381Z",
-              "EditorCaption": ""
+              "DocumentIndex": 6,
+              "Title": "dbo.Invoices.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__ME_PROJECTS_WINDOWS_FORM_KINGBOARDDB.MDF/True/SqlTable/dbo.Invoices.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__ME_PROJECTS_WINDOWS_FORM_KINGBOARDDB.MDF/True/SqlTable/dbo.Invoices.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-03-23T11:13:06.836Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Main_home.cs [Design]",
-              "DocumentMoniker": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_home.cs",
-              "RelativeDocumentMoniker": "Main_home.cs",
-              "ToolTip": "C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Main_home.cs [Design]",
-              "RelativeToolTip": "Main_home.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T18:51:37.077Z",
-              "EditorCaption": " [Design]"
+              "DocumentIndex": 7,
+              "Title": "dbo.InvoiceDetails.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__ME_PROJECTS_WINDOWS_FORM_KINGBOARDDB.MDF/True/SqlTable/dbo.InvoiceDetails.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__ME_PROJECTS_WINDOWS_FORM_KINGBOARDDB.MDF/True/SqlTable/dbo.InvoiceDetails.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-03-23T11:13:04.303Z"
             }
           ]
         }

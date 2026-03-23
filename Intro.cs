@@ -25,6 +25,7 @@ namespace App
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            Functions.clicked_button = 0;
             func.Open(new Main_home());
         }
        
@@ -43,13 +44,15 @@ namespace App
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+            Functions.clicked_button = 2;
             func.Open(new Main_home());
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-            func.Open(new Home());
+            Functions.clicked_button = 1;
+            func.Open(new Main_home());
            
         }
     }

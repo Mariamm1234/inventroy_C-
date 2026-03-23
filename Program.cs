@@ -35,6 +35,7 @@ namespace App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            AppDomain.CurrentDomain.SetData("DataDirectory", @"C:\ME\PROJECTS\WINDOWS_FORMS\App");
             forms = new List<Form>() { new loading(),  new Home(),new Intro() ,new Main_home()};
             Application.Run(forms.First());
         }

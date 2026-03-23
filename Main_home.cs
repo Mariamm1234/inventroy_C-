@@ -1,4 +1,5 @@
 ﻿using App.Main_Pages;
+using Main_functions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,8 +24,9 @@ namespace App
         public Main_home()
         {
             InitializeComponent();
-            this.Text = "Animated Top Navbar";
+            this.Text = "الرئيسيه";
             this.Size = new Size(900, 500);
+            this.Icon = Icon = new Icon("C:\\ME\\PROJECTS\\WINDOWS_FORM\\App\\Resources\\homefolderblank_99358.ico");
 
             // Create TabControl (hidden headers)
             tabControl = new TabControl();
@@ -32,7 +34,7 @@ namespace App
             tabControl.Appearance = TabAppearance.FlatButtons;
             tabControl.ItemSize = new Size(0, 1);
             tabControl.SizeMode = TabSizeMode.Fixed;
-
+           
             // Add pages
             tabControl.TabPages.Add(CreateTab(new ProductsPage()));
             tabControl.TabPages.Add(CreateTab(new InvoicePage()));
@@ -64,6 +66,8 @@ namespace App
             topNavbar.Controls.Add(CreateNavButton("⚙ المستخدم", 2));
             topNavbar.Controls.Add(CreateNavButton("📊 الفواتير", 1));
             topNavbar.Controls.Add(CreateNavButton("🏠 المنتجات", 0));
+            tabControl.SelectedIndex = Functions.clicked_button;
+
             topNavbar.Controls.Add(toggleButton);
 
             // Timer for animation
@@ -82,7 +86,7 @@ namespace App
 
             page.Dock = DockStyle.Fill;
             tab.Controls.Add(page);
-
+            page.BringToFront();
             return tab;
         }
 

@@ -1,26 +1,37 @@
-﻿using System;
+﻿using App.Data_Model;
+using Main_functions;
+using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace App.Main_Pages
 {
     public partial class ProductsPage : UserControl
     {
+
         Panel card;
-        TextBox txtName, txtEmail;
+        TextBox txt;
         ComboBox combo1, combo2, combo3;
         Button btnSubmit;
+        Functions fn;
+        private readonly IKingBoardRepository _repo;
+
 
         public ProductsPage()
         {
+            fn = new Functions();
+            _repo = new KingBoardRepository(new KingBoardDBEntities1());
             InitializeComponent();
             BuildModernUI();
+
         }
 
         private void BuildModernUI()
         {
             // Background
             this.BackColor = Color.FromArgb(240, 242, 245);
+
 
             // ===== Main Card (Full Screen) =====
             card = new Panel()
@@ -39,22 +50,22 @@ namespace App.Main_Pages
                 Padding = new Padding(200, 20, 200, 20)
             };
 
-            // Equal row spacing
-            //for (int i = 0; i < 7; i++)
-            //{
-            //    layout.RowStyles.Add(new RowStyle(SizeType.Percent, 14f));
-            //}
+
 
             layout.RowStyles.Clear();
 
             layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 80)); // Title
+            //layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 70)); // Email
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 70)); // Role
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 70)); // Department
             layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 70));
-            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 70));
-            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 70));
-            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 70));
-            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 70));
-            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 20)); // Button
-            layout.Padding = new Padding(250, 30, 250, 30);
+            //layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 70)); // Status
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 20)); // Spacer row
+            layout.RowStyles.Add(new RowStyle(SizeType.Percent, 50)); // extra buttons 
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 20)); // Spacer row
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 50)); // Button (smaller height)
+
+
 
             // ===== Title =====
             Label title = new Label()
@@ -67,25 +78,35 @@ namespace App.Main_Pages
             };
 
             // ===== Inputs =====
-            txtName = CreateModernTextBox("Name");
-            txtEmail = CreateModernTextBox("Email");
+            //txtName = CreateModernTextBox("Name");
+            txt = CreateModernTextBox("قيمه التعديل");
 
-            combo1 = CreateModernComboBox(new string[] { "Role", "Admin", "User", "Guest" });
-            combo2 = CreateModernComboBox(new string[] { "Department", "HR", "IT", "Sales" });
-            combo3 = CreateModernComboBox(new string[] { "Status", "Active", "Inactive" });
+            combo1 = CreateModernComboBox(_repo.GetAllProducts().Select(p => p.ProductName).ToArray());
+            combo2 = CreateModernComboBox(new string[] { "السعر", "الكميه" });
+            //combo3 = CreateModernComboBox(new string[] { "Status", "Active", "Inactive" });
+
+            // 👇 Hook the event here
+            combo1.SelectedIndexChanged += Combo1_SelectedIndexChanged;
+            combo2.SelectedIndexChanged += Combo2_SelectedIndexChanged;
+
+            // Hide dependent controls initially
+            txt.Visible = false;
+            combo2.Visible = false;
+            //combo3.Visible = false;
 
             // ===== Button =====
             btnSubmit = new Button()
             {
-                    Text = "Submit",
-    Dock = DockStyle.Fill,
-    MinimumSize = new Size(0, 10), // 👈 taller button
-    FlatStyle = FlatStyle.Flat,
-    BackColor = Color.FromArgb(0, 120, 215),
-    ForeColor = Color.White,
-    Font = new Font("Segoe UI", 13, FontStyle.Bold),
-    Margin = new Padding(0, 15, 0, 10)
+                Text = "تأكيد",
+                Dock = DockStyle.None, // 👈 prevents stretching full width
+                Size = new Size(150, 40), // 👈 smaller width & height
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(0, 120, 215),
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                Margin = new Padding(0)
             };
+
 
             btnSubmit.FlatAppearance.BorderSize = 0;
 
@@ -93,20 +114,92 @@ namespace App.Main_Pages
             btnSubmit.MouseEnter += (s, e) => btnSubmit.BackColor = Color.FromArgb(0, 100, 190);
             btnSubmit.MouseLeave += (s, e) => btnSubmit.BackColor = Color.FromArgb(0, 120, 215);
 
+
+            // ===== Extra Buttons =====
+            Button btnInfo = new Button()
+            {
+                Text = "➕ إضافه منتج",
+                Dock = DockStyle.None,
+                Size = new Size(150, 40),
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(0, 180, 120), // green
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                Margin = new Padding(0, 15, 0, 10)
+            };
+            btnInfo.FlatAppearance.BorderSize = 0;
+            btnInfo.Click += (s, e) => fn.ShowAddPopup("Add Item");
+
+            // Second extra button
+            Button btnWarning = new Button()
+            {
+                Text = "🗑 مسح منتج",
+                Dock = DockStyle.None,
+                Size = new Size(150, 40),
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(220, 80, 60), // red
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                Margin = new Padding(0, 15, 0, 10)
+            };
+            btnWarning.FlatAppearance.BorderSize = 0;
+            btnWarning.Click += (s, e) => fn.ShowAddPopup("Delete Item");
+
+
+
+
+            // ===== Extra Buttons Row =====
+            FlowLayoutPanel extraButtonsPanel = new FlowLayoutPanel()
+            {
+                AutoSize = true,
+                Dock = DockStyle.Fill,         // 👈 prevents stretching full width
+                FlowDirection = FlowDirection.LeftToRight,
+                Anchor = AnchorStyles.None,    // 👈 keeps centered in its row
+                Padding = new Padding(0),
+                Margin = new Padding(0),
+                WrapContents = true,
+            };
+
+
+            btnInfo.Margin = new Padding(10, 0, 10, 0);   // space around Info
+            btnWarning.Margin = new Padding(10, 0, 10, 0); // space around Warning
+
+            extraButtonsPanel.Controls.Add(btnInfo);
+            extraButtonsPanel.Controls.Add(btnWarning);
+
+
+            // ===== Submit Button Row =====
+            FlowLayoutPanel submitPanel = new FlowLayoutPanel()
+            {
+                AutoSize = true,
+                Dock = DockStyle.None,
+                FlowDirection = FlowDirection.LeftToRight,
+                Anchor = AnchorStyles.None,
+                WrapContents = true,
+            };
+            btnSubmit.Margin = new Padding(10, 0, 10, 0);
+            submitPanel.Controls.Add(btnSubmit);
+
+
             // ===== Add controls to layout =====
             layout.Controls.Add(title, 0, 0);
-            layout.Controls.Add(txtName, 0, 1);
-            layout.Controls.Add(txtEmail, 0, 2);
-            layout.Controls.Add(combo1, 0, 3);
-            layout.Controls.Add(combo2, 0, 4);
-            layout.Controls.Add(combo3, 0, 5);
-            layout.Controls.Add(btnSubmit, 0, 6);
+
+            layout.Controls.Add(combo1, 0, 1);
+            layout.Controls.Add(combo2, 0, 2);
+            //layout.Controls.Add(combo3, 0, 3);
+
+            layout.Controls.Add(txt, 0, 3);
+            layout.Controls.Add(extraButtonsPanel, 0, 5);
+            layout.Controls.Add(submitPanel, 0, 7);
+
 
             // ===== Add layout to card =====
             card.Controls.Add(layout);
 
             // ===== Add card to page =====
             this.Controls.Add(card);
+
+
         }
 
         // ===== Modern TextBox with Placeholder =====
@@ -114,15 +207,15 @@ namespace App.Main_Pages
         {
             TextBox txt = new TextBox()
             {
-         Text = placeholder,
-        ForeColor = Color.Gray,
-        Dock = DockStyle.Fill,
-        Margin = new Padding(0, 10, 0, 10),
-        BorderStyle = BorderStyle.FixedSingle,
-        Font = new Font("Segoe UI", 13), // bigger text
-        MinimumSize = new Size(0, 45), // 👈 control height
-            TextAlign=HorizontalAlignment.Left,
-            
+                Text = placeholder,
+                ForeColor = Color.Gray,
+                Dock = DockStyle.Fill,
+                Margin = new Padding(0, 10, 0, 10),
+                BorderStyle = BorderStyle.FixedSingle,
+                Font = new Font("Segoe UI", 13), // bigger text
+                MinimumSize = new Size(0, 45), // 👈 control height
+                TextAlign = HorizontalAlignment.Left,
+
             };
 
             txt.GotFocus += (s, e) =>
@@ -155,13 +248,48 @@ namespace App.Main_Pages
                 Margin = new Padding(0, 10, 0, 10),
                 DropDownStyle = ComboBoxStyle.DropDownList,
                 Font = new Font("Segoe UI", 13),
-                MinimumSize = new Size(0, 50) // 👈 height
+                MinimumSize = new Size(0, 70) // 👈 height
             };
 
             combo.Items.AddRange(items);
             combo.SelectedIndex = 0;
 
             return combo;
+        }
+
+        private void Combo1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = combo1.SelectedItem.ToString();
+
+
+            combo2.Visible = false;
+            //combo3.Visible = false;
+
+            // Show controls based on selection
+            if (selected != null)
+            {
+
+                combo2.Visible = true;
+                //combo3.Visible = true; // show department
+            }
+
+        }
+        private void Combo2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = combo2.SelectedItem.ToString();
+
+
+            txt.Visible = false;
+            //combo3.Visible = false;
+
+            // Show controls based on selection
+            if (selected != null)
+            {
+
+                txt.Visible = true;
+                //combo3.Visible = true; // show department
+            }
+
         }
     }
 }
